@@ -1,0 +1,106 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Editor/MatrixMaker.uss?fileID=7433441132597879392&amp;guid=8d2a6815054b026458e5a82aa68e5f20&amp;type=3#MatrixMaker"/>
+    <ui:Label text="InventoryUIBlock Editing" name="Label" style="position: absolute; font-size: 20px; top: auto;"/>
+    <ui:Toggle label="Occupied" name="Occupied" style="position: absolute; top: 400px; left: auto; right: 0;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="Occupied" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:Toggle>
+    <ui:Toggle label="BRight" name="BRight" style="position: absolute; top: 420px; left: auto; align-items: stretch; justify-content: space-evenly; align-self: center; right: 0;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="BRight" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:Toggle>
+    <ui:Toggle label="BLeft" name="BLeft" style="position: absolute; top: 440px; left: auto; align-items: stretch; justify-content: space-evenly; align-self: center; right: 0;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="BLeft" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:Toggle>
+    <ui:Toggle label="BUp" name="BUp" style="position: absolute; top: 460px; left: auto; align-items: stretch; justify-content: space-evenly; align-self: center; right: 0;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="BUp" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:Toggle>
+    <ui:Toggle label="BDown" name="BDown" style="position: absolute; top: 480px; left: auto; align-items: stretch; justify-content: space-evenly; align-self: center; right: 0;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="BDown" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:Toggle>
+    <ui:Label text="ItemBlock Editing" style="top: 360px; font-size: 20px;"/>
+    <ui:Toggle label="Unavailable" name="Unavailable" value="false" enabled="true" toggle-on-label-click="true" style="position: absolute; top: 40px;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="Unavailable" data-source-type="MatrixMakerHelper, Assembly-CSharp" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:Toggle>
+    <ui:Toggle label="Damaged" name="Damaged" style="position: absolute; top: 60px;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="Damaged" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:Toggle>
+    <ui:Toggle label="Upgradable" name="Upgradable" style="position: absolute; top: 80px;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="Upgradable" binding-mode="ToTarget"/>
+        </Bindings>
+    </ui:Toggle>
+    <ui:IntegerField label="Rows" value="2" style="right: auto; left: auto; top: 180px; position: absolute;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="Rows" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:IntegerField>
+    <ui:IntegerField label="Columns" value="2" style="position: absolute; top: 200px;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="Columns" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:IntegerField>
+    <ui:Toggle label="CreateInventory" style="position: absolute; top: 300px;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="createinventory" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:Toggle>
+    <ui:Button text="Button" name="Right" style="position: absolute; top: 300px; left: 400px;"/>
+    <ui:Label text="0,0" style="position: absolute; left: 360px; top: 300px; right: auto;">
+        <Bindings>
+            <ui:DataBinding property="text" data-source-path="mousetext" binding-mode="ToTarget"/>
+        </Bindings>
+    </ui:Label>
+    <ui:Label text="Selected Block" style="position: absolute; top: 250px; left: 320px;"/>
+    <ui:Button text="Up" name="Up" style="position: absolute; top: 270px; left: 345px;"/>
+    <ui:Button text="Button" name="Down" style="position: absolute; top: 330px; left: 335px;"/>
+    <ui:Button text="Button" name="Left" style="position: absolute; top: 300px; left: 270px;"/>
+    <ui:Button text="Refresh" name="refresh" style="position: absolute; top: 99px; left: 326px; bottom: auto;"/>
+    <ui:Toggle label="CreateItemMatrix" style="position: absolute; top: 500px; left: 0;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="createitemmatrix" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:Toggle>
+    <ui:Toggle label="Rotation" style="position: absolute; top: 400px; left: 0;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="Rotation" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:Toggle>
+    <ui:IntegerField label="Flip" value="0" style="position: absolute; top: 420px; left: 0;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="Flip" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:IntegerField>
+    <ui:IntegerField label="ItemColumns" value="0" style="position: absolute; top: 460px; left: 0;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="ItemColumns" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:IntegerField>
+    <ui:IntegerField label="ItemRows" value="0" style="position: absolute; top: 440px; left: 0;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="ItemRows" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:IntegerField>
+    <ui:Toggle label="PrintItemData" style="position: absolute; top: 542px; left: auto; right: 0;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="printdata" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:Toggle>
+    <ui:IntegerField label="SpriteIndex" value="0" style="position: absolute; top: 500px; left: auto; right: 0;">
+        <Bindings>
+            <ui:DataBinding property="value" data-source-path="Sprite" binding-mode="TwoWay"/>
+        </Bindings>
+    </ui:IntegerField>
+</ui:UXML>
